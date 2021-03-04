@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  pathPrefix: ``,
+  pathPrefix: `/Crys.to`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
