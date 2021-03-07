@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import ExternalLink from '@common/ExternalLink';
+import LinkedinIcon from '@static/icons/linkedin.svg';
 
 import { Section, Container } from '@components/global';
 
@@ -10,26 +12,31 @@ const TEAM = [
     name: 'Alireza Moshtaghi',
     image: 'alireza.jpg',
     role: 'Market Analyst',
+    linkedin: 'https://www.linkedin.com/in/alimoshtaghi/',
   },
   {
     name: 'Faramarz Salehpour',
     image: 'faramarz.jpg',
     role: 'Backend Developer',
+    linkedin: 'https://www.linkedin.com/in/fsalehpour/',
   },
   {
     name: 'Mahsa Mohsenian',
     image: 'mahsa.jpg',
     role: 'Financial Operation',
+    linkedin: 'https://www.linkedin.com/in/mahsa-mohsenian-1872935a/',
   },
   {
     name: 'Mehdi Moshtaghi',
     image: 'mehdi.jpg',
     role: 'FullStack Developer',
+    linkedin: 'https://www.linkedin.com/in/moshtaghim/',
   },
   {
     name: 'Sadra Amlashi',
     image: 'sadra.jpg',
     role: 'Backend Developer',
+    linkedin: 'https://www.linkedin.com/in/amlashisadra/',
   },
 ];
 
@@ -66,7 +73,7 @@ const Team = () => (
         <Container style={{ position: 'relative' }}>
           <h1>The Team</h1>
           <TeamGrid>
-            {TEAM.map(({ name, image, role }) => {
+            {TEAM.map(({ name, image, role, linkedin }) => {
               const img = data.allFile.edges.find(
                 ({ node }) => node.relativePath === image
               ).node;
@@ -76,6 +83,9 @@ const Team = () => (
                   <Img fluid={img.childImageSharp.fluid} alt={name} />
                   <Title>{name}</Title>
                   <Subtitle>{role}</Subtitle>
+                  <ExternalLink href={linkedin}>
+                    <img src={LinkedinIcon} alt="linkdin profile" />
+                  </ExternalLink>
                 </div>
               );
             })}
@@ -149,6 +159,7 @@ const ArtMobile = styled.figure`
 `;
 
 const Title = styled.p`
+  font-size: 22px;
   margin-top: 16px;
   color: ${props => props.theme.color.black.regular};
 `;
