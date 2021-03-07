@@ -6,9 +6,14 @@ import Img from 'gatsby-image';
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
-import TelegramIcon from '@static/icons/telegram.svg';
+import TelegramIcon from '@static/icons/telegram-line.svg';
+import EmailIcon from '@static/icons/email.svg';
 
 const SOCIAL = [
+  {
+    icon: EmailIcon,
+    link: 'mailto:info@crys.to',
+  },
   {
     icon: TelegramIcon,
     link: 'https://t.me/CrystoTrader',
