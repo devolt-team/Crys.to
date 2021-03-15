@@ -21,11 +21,11 @@ const theme = {
       regular: '#211E26',
     },
     primary: {
-      light: '#48a4b1',
-      dark: '#2a6f7f',
+      light: '#4cb463',
+      dark: '#28a33f',
     },
   },
-  pattern: 'linear-gradient(to right,#2a6f7f 0%,#48a4b1 51%,#2a6f7f 100% )',
+  pattern: 'linear-gradient(to right,#28a33f 0%,#4cb463 51%,#28a33f 100% )',
   screen: {
     xs: '575px',
     sm: '767px',
